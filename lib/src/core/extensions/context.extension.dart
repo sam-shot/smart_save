@@ -20,7 +20,7 @@ extension ContextExt on BuildContext {
   TextStyle get medium20 => Theme.of(this).textTheme.labelSmall!;
   TextStyle get medium24 => Theme.of(this).textTheme.labelMedium!;
   TextStyle get medium28 => Theme.of(this).textTheme.labelLarge!;
-  TextStyle get thick24 => Theme.of(this).textTheme.headlineSmall!;
+  TextStyle get thick22 => Theme.of(this).textTheme.headlineSmall!;
 }
 
 extension Navigation on BuildContext {

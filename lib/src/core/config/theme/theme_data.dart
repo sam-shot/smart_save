@@ -64,7 +64,7 @@ class AppTheme {
 
       /// THICK WEIGHT
       headlineSmall: GoogleFonts.plusJakartaSans(
-          fontSize: 24,
+          fontSize: 22,
           color: Colors.white.withOpacity(0.9),
           fontWeight: FontWeight.w700),
     ),

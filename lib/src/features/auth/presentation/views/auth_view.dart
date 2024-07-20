@@ -1,10 +1,8 @@
-import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:smart_save/src/core/extensions/context.extension.dart';
 import 'package:smart_save/src/features/auth/presentation/views/login_view.dart';
-import 'package:smart_save/src/shared/constants/app_assets.dart';
 import 'package:smart_save/src/shared/widgets/button.dart';
 
 class AuthView extends StatelessWidget {
@@ -19,24 +17,34 @@ class AuthView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Spacer(),
+              const Gap(50),
+              Expanded(
+                child: Image.asset(
+                  "assets/girl.png",
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+              const Gap(20),
               Align(
                 child: Text(
-                  "Bookmarks saving made \nsuper easy",
+                  "Organize your bookmarks across all apps",
                   style: context.medium20,
                   textAlign: TextAlign.center,
                 ),
               ),
-              const Gap(50),
+              const Gap(40),
               AppButton(
                 text: "Continue with Email",
-                icon: const Icon(IconsaxOutline.add),
+                icon: const Icon(
+                  Icons.mail_rounded,
+                  size: 18,
+                ),
                 onPressed: () => context.push(const LoginView()),
               ),
               const Gap(10),
               AppButton(
                 text: "Google",
-                icon: SvgPicture.asset(AppAsset.googleLogo),
+                icon: SvgPicture.asset("assets/google.svg", width: 14),
                 onPressed: () {},
                 type: ButtonType.outlined,
               ),
